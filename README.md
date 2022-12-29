@@ -41,3 +41,6 @@ samples, guidance on mobile development, and a full API reference.
         flutter_svg: ^1.1.6  // esta porque en mi caso voy a utilizar una imagen svg en vez de una png
     Paso 2: Crear la clase:
         pag1_introduccion.dart
+
+    3- La página principal donde se van a registrar las aplicaciones del usuario no utilizó ninguna librería
+    solo para el App Bar que se utilizó Cupertino para los Icons

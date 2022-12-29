@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'pag1_introducccion.dart';
+import 'pag3_preguntas_frecuentes.dart';
 
 class PaginaPrincipal extends StatefulWidget {
   @override
@@ -14,6 +16,10 @@ class _PaginaPrincipalState extends State<PaginaPrincipal>{
 
     void bienvenida(context) => Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) => Pag1Introduccion())
+    );
+
+    void preguntasFrecuentes(context) => Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (_) => PreguntasFrecuentes())
     );
 
     //Titulo de la pagina
@@ -45,7 +51,7 @@ class _PaginaPrincipalState extends State<PaginaPrincipal>{
               child: Container(
                 padding: EdgeInsets.only(right: 15),
                 child: Icon(
-                  Icons.more_vert,
+                  CupertinoIcons.ellipsis_vertical,
                   color: Color(0xFF404040),
                 ),
               ),
@@ -56,7 +62,7 @@ class _PaginaPrincipalState extends State<PaginaPrincipal>{
                   // row with 2 children
                   child: Row(
                     children: [
-                      Icon(Icons.message, color: Colors.blue), //Color(0xFFBAC0CA),),
+                      Icon(CupertinoIcons.text_bubble, color: Colors.blue), //Color(0xFFBAC0CA),),
                       SizedBox(
                         width: 10,
                       ),
@@ -74,7 +80,7 @@ class _PaginaPrincipalState extends State<PaginaPrincipal>{
                   // row with two children
                   child: Row(
                     children: [
-                      Icon(Icons.quiz_sharp, color: Colors.blue), //Color(0xFFBAC0CA),),
+                      Icon(CupertinoIcons.question_circle, color: Colors.blue), //Color(0xFFBAC0CA),),
                       SizedBox(
                         width: 10,
                       ),
@@ -96,7 +102,7 @@ class _PaginaPrincipalState extends State<PaginaPrincipal>{
                   bienvenida(context);
                   // if value 2 show dialog
                 } else if (value == 2) {
-                  //preguntasFrecuentes(context);
+                  preguntasFrecuentes(context);
                 }
               },
             ),
