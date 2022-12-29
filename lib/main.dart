@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pag1_introducccion.dart';
+import 'pag2_pagina_principal.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +26,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Pag1Introduccion()
+      home: PaginaPrincipal()
+      //Pag1Introduccion()
+      // const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }

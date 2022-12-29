@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'pag2_pagina_principal.dart';
 
 class Pag1Introduccion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
 
-   // void goToPaginaPrincipal(context) => Navigator.of(context).pushReplacement(
-   //     MaterialPageRoute(builder: (_) => PaginaPrincipal())
-   // );
+   void goToPaginaPrincipal(context) => Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (_) => PaginaPrincipal()));
 
     PageDecoration getPageDecoration() => PageDecoration(
       titleTextStyle: TextStyle (
@@ -72,14 +72,12 @@ class Pag1Introduccion extends StatelessWidget {
             )
           ],
           done: Text('Comenzar', style: TextStyle(fontWeight: FontWeight.w400),),
-          onDone: () => {},
-          //onDone: () => goToPaginaPrincipal(context),
+          onDone: () => goToPaginaPrincipal(context),
           showNextButton: true,
           next: Text("Siguiente"),
           showSkipButton: true,
           skip: Text("Omitir"),
-          onSkip: () => {},
-          //onSkip: () => goToPaginaPrincipal(context),
+          onSkip: () => goToPaginaPrincipal(context),
         ));
     return v;
   }
