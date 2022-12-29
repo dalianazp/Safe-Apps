@@ -37,6 +37,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_native_splash: ^2.2.16
+  introduction_screen: ^3.1.2
+  flutter_svg: ^1.1.6
 
 
 dev_dependencies:
@@ -98,3 +100,27 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  assets:
+    - assets/img/
+
+  fonts:
+    - family: black
+      fonts:
+        - asset: assets/fonts/Roboto-Black.ttf
+
+    - family: bold
+      fonts:
+        - asset: assets/fonts/Roboto-Bold.ttf
+
+    - family: light
+      fonts:
+        - asset: assets/fonts/Roboto-Light.ttf
+
+    - family: medium
+      fonts:
+        - asset: assets/fonts/Roboto-Medium.ttf
+
+    - family: regular
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
