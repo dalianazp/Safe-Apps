@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'pag1_introducccion.dart';
 import 'pag3_preguntas_frecuentes.dart';
+import 'pag4_qr_home.dart';
+import 'pag5_correo_electronico.dart';
+import 'pag6_sms.dart';
 
 class PaginaPrincipal extends StatefulWidget {
   @override
@@ -111,13 +114,42 @@ class _PaginaPrincipalState extends State<PaginaPrincipal>{
         body: Stack(
           children: [
             name,
-            textoParaUsuario
+            //textoParaUsuario,
+            Container(
+              color: Colors.white,
+              margin: EdgeInsets.only(top: 120.0, left: 20.0, right: 20.0, bottom: 520),
+              child: ListView(
+                children: [
+                  ListTile(
+                    title: Text("Página del QR"),
+                    trailing: Icon(Icons.keyboard_arrow_right_sharp),
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => QRHome()),);
+                    },
+                  ),
+                  ListTile(
+                    title: Text("Página del correo electrónico"),
+                    trailing: Icon(Icons.keyboard_arrow_right_sharp),
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => CorreoElectronico()),);
+                    },
+                  ),
+                  ListTile(
+                    title: Text("Página de los SMS"),
+                    trailing: Icon(Icons.keyboard_arrow_right_sharp),
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => SMS()),);
+                    },
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
 
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          child: const Icon(Icons.add, size: 40.0,),
+          child: const Icon(CupertinoIcons.add, size: 40.0,),
         ),
       ),
     );
